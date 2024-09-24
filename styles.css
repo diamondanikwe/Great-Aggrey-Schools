@@ -1,0 +1,229 @@
+body {
+    background-image: url(background.png);
+    background-size: 900px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(152, 199, 24, 0.5);
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+}
+
+input[name="openNav"] {
+    display: none;
+}
+
+header {
+    display: flex;
+    width: 80%;
+    margin: 0 10%;
+}
+
+.logo {
+    width: 10%;
+}
+
+.logo img {
+    margin: 10%;
+    width: 60px;
+}
+
+.navbar {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0%;
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu {
+    width: 80%;
+    text-align: center;
+    background: rgba(141, 245, 22, 0.801);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.navbar li {
+    padding: 15px;
+    display: inline-block;
+    transition: 0.5s;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.navbar li:hover {
+    background-color: #f7b933 !important;
+}
+
+@media only screen and (max-width:768px) {
+    .logo {
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+
+    .navbar {
+        position: fixed;
+        width: 20vw;
+        background-color: #197906;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        display: block;
+        transition: 0.5s;
+        transform: translate(100%, 0);
+        z-index: 1;
+    }
+
+    .navbar .openNav {
+        display: block;
+        position: absolute;
+        right: 100%;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background-color: #2b043577;
+        padding: 10px
+    }
+
+    .navbar .openNav span {
+        display: block;
+        background-color: #000;
+        width: 30px;
+        height: 3px;
+        margin: 5px 0;
+        transition: 1s;
+    }
+
+    .navbar:has(input[name="openNav"]:checked) {
+        transform: translate(0, 0);
+    }
+
+    .navbar:has(input[name="openNav"]:checked) .openNav span:nth-child(2) {
+        opacity: 0;
+        transition: 0s;
+    }
+
+    .navbar:has(input[name="openNav"]:checked) .openNav span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 5px);
+    }
+
+    .navbar:has(input[name="openNav"]:checked) .openNav span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -5px);
+    }
+
+    input[name="openNav"] {
+        display: none;
+    }
+
+    .navbar li {
+        display: block;
+        position: unset;
+        border-bottom: 2px solid #2b043577;
+        font-weight: 500;
+    }
+
+    .navbar .menu {
+        width: 100%;
+        text-align: center;
+        border-radius: unset;
+    }
+
+    .navbar .menu li:hover {
+        background-color: unset !important;
+        border-bottom: 5px solid #d5e920;
+    }
+}
+
+.begin {
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+
+}
+
+.begin .title {
+    backdrop-filter: blur(25px);
+    /* Blurs the background behind the element */
+    -webkit-backdrop-filter: blur(10px);
+    /* For Safari support */
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Semi-transparent white */
+    border-radius: 15px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Inner padding */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    /* Shadow for depth */
+    color: #fff;
+    /* Text color */
+    text-align: center;
+    /* Centered text */
+    width: 800px;
+    text-align: center;
+}
+
+.begin .title h1 {
+    color: #000000;
+    font-size: 3rem;
+}
+
+.begin .title p {
+    font-size: 2rem;
+}
+
+/* From Uiverse.io by Allyhere */
+.btn-donate {
+    --clr-font-main: hsla(0 0% 20% / 100);
+    --btn-bg-1: rgb(245, 232, 55);
+    --btn-bg-2: rgb(174, 236, 27);
+    --btn-bg-color: rgb(0, 0, 0);
+    --radii: 0.5em;
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: var(--size, 1rem);
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg,
+            var(--btn-bg-2) 0%,
+            var(--btn-bg-1) 55%,
+            var(--btn-bg-2) 90%);
+    border: none;
+    border-radius: var(--radii);
+    color: var(--btn-bg-color);
+    box-shadow:
+        0px 0px 20px rgba(248, 232, 2, 0.5),
+        0px 5px 5px -1px rgba(134, 148, 8, 0.25),
+        inset 4px 4px 8px rgba(5, 119, 11, 0.5),
+        inset -4px -4px 8px rgba(3, 105, 8, 0.35);
+}
+
+.btn-donate:hover {
+    background-position: right top;
+}
+
+.btn-donate:is(:focus, :focus-visible, :active) {
+    outline: none;
+    box-shadow:
+        0 0 0 3px var(--btn-bg-color),
+        0 0 0 6px var(--btn-bg-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-donate {
+        transition: linear;
+    }
+}
+.begin .title .green{
+    color: #197906;
+}
