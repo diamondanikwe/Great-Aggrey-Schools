@@ -195,7 +195,7 @@ header {
     --radii: 0.5em;
     cursor: pointer;
     padding: 0.9em 1.4em;
-    min-width: 120px;
+    min-width: 80px;
     min-height: 44px;
     font-size: var(--size, 1rem);
     font-weight: 500;
