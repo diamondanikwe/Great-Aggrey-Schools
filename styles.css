@@ -73,11 +73,12 @@ header {
         position: fixed;
         left: 0;
         top: 0;
+        z-index: 1;
     }
 
     .navbar {
         position: fixed;
-        width: 20vw;
+        width: 35vw;
         background-color: #197906;
         top: 0;
         right: 0;
@@ -177,11 +178,12 @@ header {
 
 .begin .title h1 {
     color: #000000;
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 .begin .title p {
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 
 /* From Uiverse.io by Allyhere */
@@ -231,4 +233,5 @@ header {
 }
 .begin .title .green{
     color: #197906;
+    font-weight: 500;
 }
