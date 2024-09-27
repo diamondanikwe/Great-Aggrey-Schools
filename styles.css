@@ -28,7 +28,7 @@ header {
 
 .logo img {
     margin: 10%;
-    width: 60px;
+    width: 100px;
 }
 
 .navbar {
@@ -80,6 +80,9 @@ header {
         z-index: 1;
     }
 
+    .logo img{
+        width: 70px;
+    }
     .navbar {
         position: fixed;
         width: 35vw;
